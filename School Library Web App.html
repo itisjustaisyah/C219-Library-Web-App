@@ -44,48 +44,56 @@
             color: white;
         }
 
-        @media (max-width: 767px) {
-            .carousel-inner .carousel-item > div {
+        #bookCarousel {
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-inner .carousel-item>div {
                 display: none;
             }
-            .carousel-inner .carousel-item > div:first-child {
+
+            .carousel-inner .carousel-item>div:first-child {
                 display: block;
             }
         }
 
         .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-start,
         .carousel-inner .carousel-item-next,
         .carousel-inner .carousel-item-prev {
             display: flex;
         }
 
-        /* medium and up screens */
         @media (min-width: 768px) {
 
-            .carousel-inner .carousel-item-end.active,
-            .carousel-inner .carousel-item-next {
-                transform: translateX(25%);
+            .carousel-inner .carousel-item-right.active,
+            .carousel-inner .carousel-item-next,
+            .carousel-item-next:not(.carousel-item-start) {
+                transform: translateX(25%) !important;
             }
 
-            .carousel-inner .carousel-item-start.active,
-            .carousel-inner .carousel-item-prev {
-                transform: translateX(-25%);
+            .carousel-inner .carousel-item-left.active,
+            .carousel-item-prev:not(.carousel-item-end),
+            .active.carousel-item-start,
+            .carousel-item-prev:not(.carousel-item-end) {
+                transform: translateX(-25%) !important;
+            }
+
+            .carousel-item-next.carousel-item-start,
+            .active.carousel-item-end {
+                transform: translateX(0) !important;
+            }
+
+            .carousel-inner .carousel-item-prev,
+            .carousel-item-prev:not(.carousel-item-end) {
+                transform: translateX(-25%) !important;
             }
         }
-
-        .carousel-inner .carousel-item-end,
-        .carousel-inner .carousel-item-start {
-            transform: translateX(0);
+        .book-cover{
+            height: 450px;
+            width: 322px;
         }
-
-        /*.card-img {
-            object-fit: cover;
-        }
-
-        .book-cover {
-            width: 30vw;
-            height: 55vh;
-        }*/
 
 
 
@@ -116,13 +124,13 @@
 
         <div class="container text-center my-3 p-2 px-5 ">
             <div class="row justify-content-center">
-                <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item justify-content-center active">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                <div id="bookCarousel" class="carousel slide container" data-bs-ride="carousel">
+                    <div class="carousel-inner w-100">
+                        <div class="carousel-item active">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card" id="b0">
                                     <div class="card-img">
-                                        <img src="images/th-917409722.jpg" class="img-fluid book-cover">
+                                        <img src="images/TheLastFourThings.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -131,11 +139,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card" id="b1">
                                     <div class="card-img">
-                                        <img src="images/th-1187222119.jpg" class="img-fluid book-cover">
+                                        <img src="images/TheShotToDieFor.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -144,11 +152,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card" id="b2">
                                     <div class="card-img">
-                                        <img src="images/th-1212092692.jpg" class="img-fluid book-cover">
+                                        <img src="images/GraveSecrets.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -157,11 +165,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card" id="b3">
                                     <div class="card-img">
-                                        <img src="images/th-2041251286.jpg" class="img-fluid book-cover">
+                                        <img src="images/FortressofBlood.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -170,11 +178,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card" id="b4">
                                     <div class="card-img">
-                                        <img src="images/th-2266566868.jpg" class="img-fluid book-cover">
+                                        <img src="images/TheOutsider.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -183,11 +191,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card"id="b5">
                                     <div class="card-img">
-                                        <img src="images/th-2411703690.jpg" class="img-fluid book-cover">
+                                        <img src="images/ToKillAMockingbird.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -196,11 +204,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card"id="b6">
                                     <div class="card-img">
-                                        <img src="images/th-2539185761.jpg" class="img-fluid book-cover">
+                                        <img src="images/FrostArch.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -209,11 +217,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card"id="b7">
                                     <div class="card-img">
-                                        <img src="images/th-2718427733.jpg" class="img-fluid book-cover">
+                                        <img src="images/TheQueenOfHearts.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -222,11 +230,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card"id="b8">
                                     <div class="card-img">
-                                        <img src="images/th-3051633562.jpg" class="img-fluid book-cover">
+                                        <img src="images/LookAtMe.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -235,11 +243,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card"id="b9">
                                     <div class="card-img">
-                                        <img src="images/th-3082411388.jpg" class="img-fluid book-cover">
+                                        <img src="images/DaughterOfMan.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -248,11 +256,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card"id="b10">
                                     <div class="card-img">
-                                        <img src="images/th-3290272450.jpg" class="img-fluid book-cover">
+                                        <img src="images/Headkid.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -261,11 +269,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card"id="b11">
                                     <div class="card-img">
-                                        <img src="images/th-3514146108.jpg" class="img-fluid book-cover">
+                                        <img src="images/AThousandPiecesOfYou.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -274,11 +282,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item   justify-content-center">
-                            <div class="col-md-3 d-flex align-items-stretch">
+                        <div class="carousel-item">
+                            <div class="col-md-3 d-md-flex align-items-stretch">
                                 <div class="card"id="b12">
                                     <div class="card-img">
-                                        <img src="images/th-3875557501.jpg" class="img-fluid book-cover">
+                                        <img src="images/ChildOfTheKindred.jpg" class="img-fluid book-cover">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -288,15 +296,17 @@
                             </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev bg-transparent w-aut" href="#bookCarousel" role="button" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </a>
-                    <a class="carousel-control-next bg-transparent w-aut" href="#bookCarousel" role="button" data-bs-slide="next">
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </a>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
-            <h3 class="p-5">Our collection of featured books</h3>
+            <h1 class="p-5">Our collection of featured books</h1>
         </div>
     </div>
 
@@ -433,6 +443,10 @@
         }
     ]
 
+    //TODO: Change table to have desc, blurb and reservation status
+    //TODO: Change all card to be popup link
+    //TODO: add reserve button, toggle to change reservation (bool toggle)
+
     let bookTable = $('#bookTable')
 
     function handleHover(evt, item, legend) {
@@ -475,8 +489,6 @@
         }
     };
 
-
-
     $(document).ready(function(){
 
         new fullpage('#fullpage', {
@@ -508,12 +520,22 @@
                 title,author,genre,year,type
             ]).draw()
 
-            let cardBody = $('#b'+i).find('.card-body')
+            let id = '#b'+i;
+
+            let cardBody = $(id).find('.card-body')
             let cardTitle = cardBody.find('.card-title')
             let cardText = cardBody.find('.card-text')
 
             cardTitle.html(title)
             cardText.html(author)
+
+            let tippyContent = ""
+
+            //TODO: tippyjs with blurb
+
+            tippy(id, {
+                content: "I'm a Tippy tooltip!",
+            });
 
             // let cardBody = document.getElementById("#b" + i).children("#card-body")
             // let cardTitle = cardBody.children("#card-title").innerHTML
@@ -523,6 +545,22 @@
             cardText.innerHTML = author*/
 
         }
+        /*$('.carousel .carousel-item').forEach(function () {
+            var minPerSlide = 4;
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i < minPerSlide; i++) {
+                next=next.next();
+                if (!next.length) {
+                    next=$(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });*/
 
         let items = document.querySelectorAll('.carousel .carousel-item')
 
@@ -540,6 +578,7 @@
                 next = next.nextElementSibling
             }
         })
+
     })
 
 
