@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.7/animations/scale-subtle.min.css"/>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -104,6 +105,8 @@
 
 <div id="fullpage">
     <div class="section">
+        <!--TODO: replace carousel with slide; when scrolling to left slide show grid of cards (reuse MovieNight cards)-->
+        <!--TODO: add toggle buttons that change style (semantic UI)-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#home">
@@ -126,175 +129,7 @@
             <div class="row justify-content-center">
                 <div id="bookCarousel" class="carousel slide container" data-bs-ride="carousel">
                     <div class="carousel-inner w-100">
-                        <div class="carousel-item active">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card" id="b0">
-                                    <div class="card-img">
-                                        <img src="images/TheLastFourThings.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card" id="b1">
-                                    <div class="card-img">
-                                        <img src="images/TheShotToDieFor.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card" id="b2">
-                                    <div class="card-img">
-                                        <img src="images/GraveSecrets.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card" id="b3">
-                                    <div class="card-img">
-                                        <img src="images/FortressofBlood.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card" id="b4">
-                                    <div class="card-img">
-                                        <img src="images/TheOutsider.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card"id="b5">
-                                    <div class="card-img">
-                                        <img src="images/ToKillAMockingbird.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card"id="b6">
-                                    <div class="card-img">
-                                        <img src="images/FrostArch.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card"id="b7">
-                                    <div class="card-img">
-                                        <img src="images/TheQueenOfHearts.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card"id="b8">
-                                    <div class="card-img">
-                                        <img src="images/LookAtMe.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card"id="b9">
-                                    <div class="card-img">
-                                        <img src="images/DaughterOfMan.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card"id="b10">
-                                    <div class="card-img">
-                                        <img src="images/Headkid.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Sof</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card"id="b11">
-                                    <div class="card-img">
-                                        <img src="images/AThousandPiecesOfYou.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">a</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="col-md-3 d-md-flex align-items-stretch">
-                                <div class="card"id="b12">
-                                    <div class="card-img">
-                                        <img src="images/ChildOfTheKindred.jpg" class="img-fluid book-cover">
-                                    </div>
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">a</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -342,6 +177,8 @@
             <p><a class="text-dark fs-5" href="#stats" >Stats</a></p>
             <p><a class="text-dark fs-5" href="#inventory">Inventory</a></p>
             <p class="text-dark fs-5">contact us: <a class="text-dark" href="mailto:rpslibrary@official.mail">rpslibrary@official.mail</a></p>
+
+            <button class="ui toggle button active">Voted</button>
         </footer>
     </div>
 </div>
@@ -529,6 +366,7 @@
         }
     };
 
+
     $(document).ready(function(){
 
         new fullpage('#fullpage', {
@@ -558,19 +396,40 @@
             let year = book.Year
             let type = book.Type
             let reserved = (book.Res_Bool) ? "Reserved" : "Available";
+            let image = book.Image_Name
 
             table.row.add([
                 title,author,genre,year,type,reserved
             ]).draw()
 
-            let id = '#b'+i;
+            let id =book.id;
+            let active = (i === 0) ? " active" : ""
 
-            let cardBody = $(id).find('.card-body')
+            carouselInner.append("<div class=\"carousel-item"+active+"\">\n" +
+                "                            <div class=\"col-md-3 d-md-flex align-items-stretch\">\n" +
+                "                                <div class=\"card\" id=\"b"+ id +"\">\n" +
+                "                                    <div class=\"card-img\">\n" +
+                "                                        <img src=\"images/"+image+".jpg\" class=\"img-fluid book-cover\">\n" +
+                "                                    </div>\n" +
+                "                                    <div class=\"card-body\">\n" +
+                "                                        <h5 class=\"card-title\">"+title+"</h5>\n" +
+                "                                        <p class=\"card-text\">"+author+"</p>\n" +
+                "                                        <button type=\"button\" class=\"btn btn-primary\" id=\"res_b"+ id+"\" data-bs-toggle=\"button\">Toggle button</button>" +
+                "                                    </div>\n" +
+                "                                </div>\n" +
+                "                            </div>\n" +
+                "                  </div>\n"
+        )
+            /*TODO:figure out how to do toggle button in bootstrap*/
+
+
+
+            /*let cardBody = $(id).find('.card-body')
             let cardTitle = cardBody.find('.card-title')
             let cardText = cardBody.find('.card-text')
 
             cardTitle.html(title)
-            cardText.html(author)
+            cardText.html(author)*/
 
             let tippyContent = ""
 
