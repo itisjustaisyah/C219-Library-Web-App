@@ -328,6 +328,7 @@
                     <th>Genre</th>
                     <th>Year</th>
                     <th>Type</th>
+                    <th>Reservation Status</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -350,98 +351,137 @@
 <script>
     var booksArray =
         [
-        {
-            Title: "The Last Four Things",
-            Author: "Paul Hoffman",
-            Genre: "Fantasy",
-            Year: "2013",
-            Type: "Paperback"
-        },
-        {
-            Title: "The Shot to Die For",
-            Author: "M.H. Sargent",
-            Genre: "Mystery",
-            Year: "1980",
-            Type: "eBook"
-        },
-        {
-            Title: "Grave Secrets: Short Tales of Mystery & Mayhem",
-            Author: "Rex Munsee, Jeffery Vavra",
-            Genre: "Horror",
-            Year: "2001",
-            Type: "Hardcover"
-        },
-        {
-            Title: "Fortress of Blood, Book Two of the Mina Murray Series",
-            Author: "L.D. Goffigan",
-            Genre: "Adventure",
-            Year: "2010",
-            Type: "Paperback"
-        },
-        {
-            Title: "The Outsider",
-            Author: "Stephen King",
-            Genre: "Horror",
-            Year: "1995",
-            Type: "Paperback"
-        },
-        {
-            Title: "To Kill A Mockingbird",
-            Author: "Harper Lee",
-            Genre: "Southern Gothic",
-            Year: "1960",
-            Type: "Audio"
-        },
-        {
-            Title: "Frost Arch, Buch 1: Der Fuermagier-Triologie",
-            Author: "Kate Bloomfield, Jan Schnegotzki",
-            Genre: "Adventure",
-            Year: "2021",
-            Type: "eBook"
-        },
-        {
-            Title: "The Queen Of Hearts",
-            Author: "Kimmery Martin",
-            Genre: "Drama",
-            Year: "2011",
-            Type: "Paperback"
-        },
-        {
-            Title: "Look At Me",
-            Author: "Sarah Duguid",
-            Genre: "Comedy",
-            Year: "2002",
-            Type: "Paperback"
-        },
-        {
-            Title: "The Chronicles of Otherwhere: Daughter of Man, Book 1",
-            Author: "Jonald Reagan",
-            Genre: "Drama",
-            Year: "2013",
-            Type: "Paperback"
-        },
-        {
-            Title: "HeadKid",
-            Author: "David Baddiel",
-            Genre: "Kids",
-            Year: "2020",
-            Type: "Hardcover"
-        },
-        {
-            Title: "A Thousand Pieces of You",
-            Author: "Claudia Gray",
-            Genre: "Autobigraphy",
-            Year: "2019",
-            Type: "eBook"
-        },
-        {
-            Title: "Child Of The Kindred, Part 1: A New Era, The Reinfield Chronicles: Book 2",
-            Author: "M.T Magee",
-            Genre: "Fantasy",
-            Year: "2018",
-            Type: "Hadcover"
-        }
-    ]
+            {
+                id: "0",
+                Title: "The Last Four Things",
+                Image_Name: "TheLastFourThings",
+                Author: "Paul Hoffman",
+                Genre: "Fantasy",
+                Year: "2013",
+                Type: "Paperback",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "1",
+                Title: "The Shot to Die For",
+                Image_Name: "TheShotToDieFor",
+                Author: "M.H. Sargent",
+                Genre: "Mystery",
+                Year: "1980",
+                Type: "eBook",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "2",
+                Title: "Grave Secrets: Short Tales of Mystery & Mayhem",
+                Image_Name: "GraveSecrets",
+                Author: "Rex Munsee, Jeffery Vavra",
+                Genre: "Horror",
+                Year: "2001",
+                Type: "Hardcover",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "3",
+                Title: "Fortress of Blood, Book Two of the Mina Murray Series",
+                Image_Name: "FortressofBlood",
+                Author: "L.D. Goffigan",
+                Genre: "Adventure",
+                Year: "2010",
+                Type: "Paperback",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "4",
+                Title: "The Outsider",
+                Image_Name: "TheOutsider",
+                Author: "Stephen King",
+                Genre: "Horror",
+                Year: "1995",
+                Type: "Paperback",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "5",
+                Title: "To Kill A Mockingbird",
+                Image_Name: "ToKillAMockingBird",
+                Author: "Harper Lee",
+                Genre: "Southern Gothic",
+                Year: "1960",
+                Type: "Audio",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "6",
+                Title: "Frost Arch, Buch 1: Der Fuermagier-Triologie",
+                Image_Name: "FrostArch",
+                Author: "Kate Bloomfield, Jan Schnegotzki",
+                Genre: "Adventure",
+                Year: "2021",
+                Type: "eBook",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "7",
+                Title: "The Queen Of Hearts",
+                Image_Name: "TheQueenOfHearts",
+                Author: "Kimmery Martin",
+                Genre: "Drama",
+                Year: "2011",
+                Type: "Paperback",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "8",
+                Title: "Look At Me",
+                Image_Name: "LookAtMe",
+                Author: "Sarah Duguid",
+                Genre: "Comedy",
+                Year: "2002",
+                Type: "Paperback",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "9",
+                Title: "The Chronicles of Otherwere: Daughter of Man, Book 1",
+                Image_Name: "DaughterOfMan",
+                Author: "Jonald Reagan",
+                Genre: "Drama",
+                Year: "2013",
+                Type: "Paperback",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "10",
+                Title: "HeadKid",
+                Image_Name: "Headkid",
+                Author: "David Baddiel",
+                Genre: "Kids",
+                Year: "2020",
+                Type: "Hardcover",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "11",
+                Title: "A Thousand Pieces of You",
+                Image_Name: "AThousandPiecesOFYOu",
+                Author: "Claudia Gray",
+                Genre: "Autobigraphy",
+                Year: "2019",
+                Type: "eBook",
+                Res_Bool: "FALSE"
+            },
+            {
+                id: "12",
+                Title: "Child Of The Kindred, Part 1: A New Era, The Reinfield Chronicles: Book 2",
+                Image_Name: "ChildOfTheKindred",
+                Author: "M.T Magee",
+                Genre: "Fantasy",
+                Year: "2018",
+                Type: "Hadcover",
+                Res_Bool: "FALSE"
+            }
+        ]
 
     //TODO: Change table to have desc, blurb and reservation status
     //TODO: Change all card to be popup link
@@ -503,8 +543,10 @@
             config
         );
 
-
         var table = bookTable.DataTable();
+
+        let carouselInner = $('.carousel-inner')
+
 
 
         for (let i = 0; i < booksArray.length; i++) {
@@ -515,9 +557,10 @@
             let genre = book.Genre
             let year = book.Year
             let type = book.Type
+            let reserved = (book.Res_Bool) ? "Reserved" : "Available";
 
             table.row.add([
-                title,author,genre,year,type
+                title,author,genre,year,type,reserved
             ]).draw()
 
             let id = '#b'+i;
